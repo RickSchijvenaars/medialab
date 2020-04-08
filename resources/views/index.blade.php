@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="{{asset('face-recognition/face-api.min.js')}}face-api.min.js"></script>
-    <script defer src="asset('face-recognition/script.js')"></script>
+    <meta name="_token" content="{{csrf_token()}}">
+
+    <script src="{{asset('js/app.js')}}"></script>
+
+    <script defer src="{{asset('face-recognition/face-api.min.js')}}"></script>
+    <script defer src="{{asset('face-recognition/script.js')}}"></script>
     <title>Face Recognition</title>
     <style>
         body {
