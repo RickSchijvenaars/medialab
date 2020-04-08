@@ -13,6 +13,8 @@ class QrController extends Controller
         if($location = QrScanLocation::whereName($location)->first()) {
             $scan = QrScan::create(['qr_scan_location_id' => $location->id]);
         }
+
+        return redirect('/');
     }
 
     public function index()
