@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/scan-qr/{location}', 'QrController@location');
+Route::get('/location-index', 'QrController@index');

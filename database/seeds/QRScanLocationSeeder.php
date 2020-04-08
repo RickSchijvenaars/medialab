@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class QRScanLocationSeeder extends Seeder
+class QrScanLocationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
