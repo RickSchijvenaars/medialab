@@ -18,8 +18,8 @@
 <ul>
     <li>Animaties</li>
     <li>Extra rewards bij bepaalde foto</li>
-    <li>API uitbreiden</li>
-</ul
+    <li>API uitbreiden (meer kenmerken)</li>
+</ul>
 <h2>WOULD</h2>
 <ul>
     <li>Opdrachten bij foto</li>
