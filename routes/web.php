@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::post('/api/post', 'CharacterController@postAPIData')->name('post_api_data');
+Route::get('/scan-qr/{location}', 'QrController@location');
+Route::get('/location-index', 'QrController@index');

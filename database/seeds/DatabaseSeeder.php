@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(QrScanLocationSeeder::class);
         // $this->call(UsersTableSeeder::class);
         DB::table('character_expressions')->insert([
             'name' => 'neutral',
