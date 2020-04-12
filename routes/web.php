@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::view('/upload', 'upload');
 
-Route::post('/api/post', 'CharacterController@postAPIData')->name('post_api_data');
+Route::get('/', 'CharacterController@index');
 Route::get('/scan-qr/{location}', 'QrController@location');
 Route::get('/location-index', 'QrController@index');
+
+Route::post('/api/post', 'CharacterController@postAPIData')->name('post_api_data');
