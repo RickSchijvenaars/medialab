@@ -4,10 +4,24 @@ namespace App\Http\Controllers;
 
 use App\CharacterExpression;
 use App\CharacterValue;
+use App\QrScanLocation;
 use Illuminate\Http\Request;
 
 class CharacterController extends Controller
 {
+
+    public function index(){
+        $locations = QrScanLocation::with('scans')->get();
+        $grouped_values = CharacterValue::all()->groupBy('expression_id');
+        $average_expressions = array();
+        
+        foreach ($grouped_values as $group) {
+            $value = collect($group)->average('value');
+            array_push($average_expressions, $value);
+        }
+        return view('index', ['locations' => $locations, 'average_expressions' => $average_expressions]);
+    }
+
     public function postAPIData(Request $request){
         foreach ($request->api_data['expressions'] as $key => $expression){
             $fk = CharacterExpression::where('name', $key)->first();
