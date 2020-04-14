@@ -10,13 +10,19 @@
 </head>
 
 <body>
-    @foreach($average_expressions as $expression)
-        {{$expression}} <br>
-    @endforeach
+
     <br>
     @foreach($locations as $location)
         {{$location->name}}: {{$location->scans->count()}} <br>
     @endforeach
+
+    <ul>
+        @foreach($values as $value)
+            <li>{{$value->expression->name}} : {{number_format($value->avg_val * 100, 2)}}%</li>
+        @endforeach
+    </ul>
+
+    <h1>{{number_format($age)}} Jaren jong</h1>
 </body>
 
 </html>
