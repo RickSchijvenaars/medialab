@@ -14,7 +14,7 @@ class QrController extends Controller
             $scan = QrScan::create(['qr_scan_location_id' => $location->id]);
         }
 
-        return redirect('/upload');
+        return redirect('upload');
     }
 
     public function index()

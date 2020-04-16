@@ -1,6 +1,5 @@
 const input = document.getElementById('input')
-const imgContainer = document.getElementById('img')
-
+const loading = document.getElementById('loading')
 
 Promise.all([
     faceapi.nets.ssdMobilenetv1.loadFromUri('/face-recognition/models'),
@@ -13,27 +12,29 @@ Promise.all([
 async function start() {
     let image
     input.addEventListener('change', async() => {
+        loading.style.display = "block"
         if (image) image.remove()
         image = await faceapi.bufferToImage(input.files[0])
-        imgContainer.src = image.src
         const detections = await faceapi.detectAllFaces(image).withFaceExpressions().withAgeAndGender()
 
         detections.forEach(detection => {
             console.log(detection)
             postToDB(detection)
         });
+
+        window.location.href = '/upload/completed'
     })
 }
 
-function postToDB(data){
+function postToDB(data) {
     axios.post('/api/post', {
-        api_data: data
-    })
-    .then(res=>{
-        console.log('posted data: ')
-        console.log(res)
-    })
-    .catch(err =>{
-        console.log(err)
-    })
+            api_data: data
+        })
+        .then(res => {
+            console.log('posted data: ')
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
 }

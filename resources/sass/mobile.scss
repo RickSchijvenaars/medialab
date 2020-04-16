@@ -1,0 +1,87 @@
+body {
+    overflow: hidden;
+    background-color: rgba(207, 209, 241, 0.9);
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.mobile {
+    &-container {
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(207, 209, 241, 0.9);
+    }
+    &-title {
+        font-size: 34px !important;
+        line-height: 1.2;
+        max-width: 210px;
+        &-large {
+            max-width: none !important;
+            font-size: 50px !important;
+            line-height: 0.9;
+        }
+    }
+    &-text {
+        color: #696A6B;
+        font-weight: bold;
+        font-size: 20px;
+        max-width: 220px;
+        &-small {
+            font-size: 16px;
+        }
+    }
+    &-input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    &-button {
+        margin-top: 60px;
+        color: white;
+        background-color: #9195F5;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 6px 50px;
+        border-radius: 10px;
+    }
+    &-loading {
+        display: none;
+        position: absolute;
+        max-height: 250px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &-beer {
+        &-center {
+            max-height: 150px;
+        }
+        &-top {
+            z-index: -1;
+            position: absolute;
+            transform: rotate(25deg);
+            left: -170px;
+            top: 5vh;
+            max-height: 30vh;
+        }
+        &-bottom {
+            z-index: -1;
+            position: fixed;
+            bottom: -20px;
+            right: -110px;
+            transform: rotate(-20deg);
+            max-height: 50vh;
+        }
+    }
+    &-smiley {
+        max-height: 100px;
+    }
+    &-qr {
+        max-height: 200px;
+    }
+}
