@@ -23,7 +23,7 @@
         <p class="mobile-text text-center mt-4">
             Just take a picture of yourself at the festival and upload it to us to get your free beer.
         </p>
-        <input class="mobile-input" type="file" id="input">
+        <input class="mobile-input" type="file" id="input" accept="image/*" capture="user">
         <label class="mobile-button" for="input">Take Picture</label>
         <img id="loading" class="mobile-loading" src="{{asset('img/loading.gif')}}">
     </div>
