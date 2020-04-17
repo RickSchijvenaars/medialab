@@ -12,26 +12,40 @@ class CharacterController extends Controller
 {
 
     public function index(){
-        $locations = QrScanLocation::with('scans')->get();
-
         $values = CharacterValue::select(DB::raw('avg(value) as avg_val, expression_id'))
             ->groupBy('expression_id')
             ->whereNotIn('expression_id', [8,9])
             ->get();
 
+        $maxValue = 0;
+        foreach($values as $value) {
+            if($value->avg_val > $maxValue) {
+                $maxValue = $value->avg_val;
+                $emotion_id = $value->expression_id;
+            }
+        }
+    
+        $emotion = CharacterExpression::find($emotion_id)->name;
 
-        $gender = CharacterValue::where('expression_id', 8)->select('value')->get();
+        $genders = CharacterValue::where('expression_id', 8)->select('value')->get();
         $genderList = [];
-        foreach ($gender as $value){
+        foreach ($genders as $value){
             array_push($genderList, intval($value->value));
         }
 
         $genderList = array_count_values($genderList);
 
-        $age = CharacterValue::where('expression_id', 9)->select('value')->avg('value');
+        if(array_search(max($genderList), $genderList) == 0) {
+            $gender = 'male';
+        } else {
+            $gender = 'female';
+        }
 
+        $age = CharacterValue::where('expression_id', 9)->select('value')->avg('value');        
 
-        return view('index', compact('locations', 'values', 'genderList', 'age'));
+        $location = QrScanLocation::withCount('scans')->orderBy('scans_count', 'desc')->first()->name;
+
+        return view('index', compact('emotion', 'gender', 'location', 'age'));
     }
 
     public function postAPIData(Request $request){

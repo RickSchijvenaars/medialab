@@ -11,19 +11,8 @@
 </head>
 
 <body>
-
-    <br>
-    @foreach($locations as $location)
-        {{$location->name}}: {{$location->scans->count()}} <br>
-    @endforeach
-
-    <ul>
-        @foreach($values as $value)
-            <li>{{$value->expression->name}} : {{number_format($value->avg_val * 100, 2)}}%</li>
-        @endforeach
-    </ul>
-
-    <h1>{{number_format($age)}} Jaren jong</h1>
+<h1 style="position: absolute; top: 280px; left: 26px;">{{$location}}</h1>
+<img src="{{asset('/img/output/'.$emotion.'-'.$gender.'.png')}}" alt="">
 </body>
 
 </html>
