@@ -9,4 +9,8 @@ class CharacterValue extends Model
     protected $fillable = [
         'expression_id', 'value'
     ];
+
+    public function expression(){
+        return $this->belongsTo('App\CharacterExpression');
+    }
 }
