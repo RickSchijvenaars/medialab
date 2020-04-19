@@ -1,0 +1,108 @@
+.carousel {
+    &-item,
+    .slide-container {
+        height: 100vh;
+        width: 100vw;
+        .slide {
+            &-character {
+                &-left,
+                &-right {
+                    width: 50%;
+                }
+                &-left {
+                    &-location {
+                        position: absolute;
+                        width: 140px;
+                        top: 285px;
+                        left: 10px;
+                    }
+                    &-image {
+                        &-container {
+                            position: relative;
+                            margin-bottom: 20vh;
+                        }
+                    }
+                }
+                &-right {
+                    background-color: #75A3EB;
+                    &-content {
+                        width: 100%;
+                        padding: 90px 10% 10%;
+                        .progress {
+                            height: 22px;
+                        }
+                        h2 {
+                            font-size: 1.7rem;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                &-title {
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: fit-content;
+                    font-weight: bold;
+                    font-size: 60px;
+                }
+            }
+            &-2 {
+                background-color: #2F5EAE;
+                &-left,
+                &-right {
+                    width: 50%;
+                }
+                &-title {
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: fit-content;
+                    font-weight: bold;
+                    font-size: 100px;
+                    color: white;
+                }
+                &-right {
+                    &-content {
+                        padding: 200px 200px 100px 0;
+                    }
+                    &-text {
+                        font-size: 40px;
+                        font-weight: 500;
+                        text-align: end;
+                        line-height: 1.2;
+                    }
+                }
+            }
+            &-3,
+            &-4,
+            &-5,
+            &-6,
+            &-7 {
+                background-color: #2F5EAE;
+                &-content {
+                    max-width: 80%;
+                    line-height: 1.2;
+                    color: white;
+                    font-size: 80px;
+                    font-weight: bold;
+                }
+                &-image {
+                    max-height: 300px;
+                }
+                &-text {
+                    &-small {
+                        margin: auto;
+                        max-width: 70%;
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

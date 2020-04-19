@@ -1,13 +1,3 @@
-body {
-  overflow: hidden;
-  background-color: rgba(207, 209, 241, 0.9);
-}
-
-body a:hover {
-  color: white;
-  text-decoration: none;
-}
-
 .mobile-container {
   height: 100vh;
   width: 100%;
@@ -47,7 +37,6 @@ body a:hover {
 }
 
 .mobile-button {
-  margin-top: 60px;
   color: white;
   background-color: #9195F5;
   font-size: 20px;
@@ -93,5 +82,185 @@ body a:hover {
 
 .mobile-qr {
   max-height: 200px;
+}
+
+.carousel-item,
+.carousel .slide-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.carousel-item .slide-character-left,
+.carousel-item .slide-character-right,
+.carousel .slide-container .slide-character-left,
+.carousel .slide-container .slide-character-right {
+  width: 50%;
+}
+
+.carousel-item .slide-character-left-location,
+.carousel .slide-container .slide-character-left-location {
+  position: absolute;
+  width: 140px;
+  top: 285px;
+  left: 10px;
+}
+
+.carousel-item .slide-character-left-image-container,
+.carousel .slide-container .slide-character-left-image-container {
+  position: relative;
+  margin-bottom: 20vh;
+}
+
+.carousel-item .slide-character-right,
+.carousel .slide-container .slide-character-right {
+  background-color: #75A3EB;
+}
+
+.carousel-item .slide-character-right-content,
+.carousel .slide-container .slide-character-right-content {
+  width: 100%;
+  padding: 90px 10% 10%;
+}
+
+.carousel-item .slide-character-right-content .progress,
+.carousel .slide-container .slide-character-right-content .progress {
+  height: 22px;
+}
+
+.carousel-item .slide-character-right-content h2,
+.carousel .slide-container .slide-character-right-content h2 {
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+
+.carousel-item .slide-character-title,
+.carousel .slide-container .slide-character-title {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.carousel-item .slide-2,
+.carousel .slide-container .slide-2 {
+  background-color: #2F5EAE;
+}
+
+.carousel-item .slide-2-left,
+.carousel-item .slide-2-right,
+.carousel .slide-container .slide-2-left,
+.carousel .slide-container .slide-2-right {
+  width: 50%;
+}
+
+.carousel-item .slide-2-title,
+.carousel .slide-container .slide-2-title {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+}
+
+.carousel-item .slide-2-right-content,
+.carousel .slide-container .slide-2-right-content {
+  padding: 200px 200px 100px 0;
+}
+
+.carousel-item .slide-2-right-text,
+.carousel .slide-container .slide-2-right-text {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: end;
+  line-height: 1.2;
+}
+
+.carousel-item .slide-3,
+.carousel-item .slide-4,
+.carousel-item .slide-5,
+.carousel-item .slide-6,
+.carousel-item .slide-7,
+.carousel .slide-container .slide-3,
+.carousel .slide-container .slide-4,
+.carousel .slide-container .slide-5,
+.carousel .slide-container .slide-6,
+.carousel .slide-container .slide-7 {
+  background-color: #2F5EAE;
+}
+
+.carousel-item .slide-3-content,
+.carousel-item .slide-4-content,
+.carousel-item .slide-5-content,
+.carousel-item .slide-6-content,
+.carousel-item .slide-7-content,
+.carousel .slide-container .slide-3-content,
+.carousel .slide-container .slide-4-content,
+.carousel .slide-container .slide-5-content,
+.carousel .slide-container .slide-6-content,
+.carousel .slide-container .slide-7-content {
+  max-width: 80%;
+  line-height: 1.2;
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.carousel-item .slide-3-image,
+.carousel-item .slide-4-image,
+.carousel-item .slide-5-image,
+.carousel-item .slide-6-image,
+.carousel-item .slide-7-image,
+.carousel .slide-container .slide-3-image,
+.carousel .slide-container .slide-4-image,
+.carousel .slide-container .slide-5-image,
+.carousel .slide-container .slide-6-image,
+.carousel .slide-container .slide-7-image {
+  max-height: 300px;
+}
+
+.carousel-item .slide-3-text-small,
+.carousel-item .slide-4-text-small,
+.carousel-item .slide-5-text-small,
+.carousel-item .slide-6-text-small,
+.carousel-item .slide-7-text-small,
+.carousel .slide-container .slide-3-text-small,
+.carousel .slide-container .slide-4-text-small,
+.carousel .slide-container .slide-5-text-small,
+.carousel .slide-container .slide-6-text-small,
+.carousel .slide-container .slide-7-text-small {
+  margin: auto;
+  max-width: 70%;
+  font-size: 50px;
+}
+
+body {
+  overflow: hidden;
+}
+
+body a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-yellow {
+  color: #FCCE0B;
 }
 

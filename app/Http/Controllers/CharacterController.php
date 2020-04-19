@@ -45,7 +45,7 @@ class CharacterController extends Controller
 
         $location = QrScanLocation::withCount('scans')->orderBy('scans_count', 'desc')->first()->name;
 
-        return view('index', compact('emotion', 'gender', 'location', 'age'));
+        return view('index', compact('emotion', 'gender', 'location', 'age', 'values'));
     }
 
     public function postAPIData(Request $request){

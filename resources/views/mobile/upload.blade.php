@@ -21,10 +21,13 @@
         </span>
         <img class="mobile-beer-center mt-3" src="{{asset('img/pint-of-beer.svg')}}">    
         <p class="mobile-text text-center mt-4">
-            Just take a picture of yourself at the festival and upload it to us to get your free beer.
+            Just upload a picture of yourself and get your free beer.
         </p>
         <input class="mobile-input" type="file" id="input" accept="image/*" capture="user">
-        <label class="mobile-button" for="input">Take Picture</label>
+        <label class="mobile-button mt-4" for="input">Take Picture</label>
+        <p class="mobile-text mobile-text-small text-center mt-4">
+            Your photo will not be saved. We will only use data gathered from the photo.
+        </p>
         <img id="loading" class="mobile-loading" src="{{asset('img/loading.gif')}}">
     </div>
     <img class="mobile-beer-top" src="{{asset('img/beer.svg')}}">
