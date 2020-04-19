@@ -14,7 +14,7 @@
 <body>
     <div class="mobile-container d-flex flex-column justify-content-center align-items-center">
         <span class="mobile-title-large mobile-text text-center">
-            Scan the code
+            Get your beer at the bar with this coupon
         </span>
         <img class="mobile-beer-center mt-5" src="{{asset('img/pint-of-beer.svg')}}">    
         <img class="mobile-qr mt-5" src="{{asset('img/qr-code.png')}}">    
