@@ -21,8 +21,6 @@ async function start() {
             console.log(detection)
             postToDB(detection)
         });
-
-        window.location.href = '/upload/completed'
     })
 }
 
@@ -33,6 +31,7 @@ function postToDB(data) {
         .then(res => {
             console.log('posted data: ')
             console.log(res)
+            window.location.href = '/upload/completed'
         })
         .catch(err => {
             console.log(err)
